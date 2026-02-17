@@ -224,7 +224,7 @@ export default function Furniture({ data }: FurnitureProps) {
                     mode="translate"
                     onMouseUp={handleTransformEnd}
                     onObjectChange={handleObjectChange}
-                    onDraggingChanged={(e: any) => setIsDragging(e.value)}
+                    onChange={(e: any) => setIsDragging(e.value)}
                     translationSnap={null}
                     showX={true}
                     showY={true}
