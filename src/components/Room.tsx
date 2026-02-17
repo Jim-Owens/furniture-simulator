@@ -62,6 +62,7 @@ export default function Room() {
             >
                 <extrudeGeometry args={[wallShape, { depth: height, bevelEnabled: false }]} />
                 <meshStandardMaterial
+                    key={`wall-mat-${roomSize.wallOpacity !== undefined && roomSize.wallOpacity < 1}`}
                     color="#d4d4d4"
                     transparent={roomSize.wallOpacity !== undefined && roomSize.wallOpacity < 1}
                     opacity={roomSize.wallOpacity ?? 1}
