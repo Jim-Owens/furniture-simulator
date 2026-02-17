@@ -3,6 +3,7 @@ import UIOverlay from './components/UIOverlay'
 import PolygonEditor from './components/PolygonEditor'
 import { useStore } from './store/useStore'
 import { SpeedInsights } from '@vercel/speed-insights/react'
+import { Analytics } from '@vercel/analytics/react'
 
 function App() {
   const isPolygonEditorOpen = useStore((state) => state.isPolygonEditorOpen)
@@ -13,6 +14,7 @@ function App() {
       <UIOverlay />
       {isPolygonEditorOpen && <PolygonEditor />}
       <SpeedInsights />
+      <Analytics />
     </div>
   )
 }
